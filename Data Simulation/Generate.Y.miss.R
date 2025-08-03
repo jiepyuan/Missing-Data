@@ -97,7 +97,7 @@ for (N in c(30, 50, 200, 500, 1000)) {
               
               # Apply the missing data mechanism
               if (missing_type == "Y_MCAR") {
-                data_copy <- MCAR_generator_Y(data, mr, rep) # Because mcar is randomly drawn each time and is not based on the value of existing data, rep insurance is added
+                data_copy <- MCAR_generator_Y(data, mr, rep) # Because MCAR is randomly drawn each time and is not based on the value of existing data, rep is added
                 
               } else if (missing_type == "Y_MAR_X1") {
                 data_copy <- MAR_generator_Y_X1(data, mr)
@@ -121,5 +121,6 @@ for (N in c(30, 50, 200, 500, 1000)) {
     }
   }
 }
+
 
 
